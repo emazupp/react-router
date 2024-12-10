@@ -1,0 +1,13 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  height: 60px;
+}
+
+main {
+  flex: 1;
+}
