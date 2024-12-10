@@ -6,8 +6,19 @@
 
 footer {
   height: 60px;
+  padding: 20px;
 }
 
 main {
   flex: 1;
+}
+
+/* navbar */
+
+.navbar-brand {
+  color: blueviolet !important;
+}
+
+.nav-link.active {
+  color: blueviolet !important;
 }
