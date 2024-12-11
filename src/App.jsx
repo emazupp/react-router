@@ -3,6 +3,7 @@ import AboutUsPage from "./pages/AboutusPage";
 import PostListPage from "./pages/PostListPage";
 import HomePage from "./pages/HomePage";
 import DefaultLayout from "./components/layout/DefaultLayout";
+import SinglePostPage from "./pages/SinglePostPage";
 
 function App() {
   return (
@@ -11,9 +12,8 @@ function App() {
         <Route element={<DefaultLayout />}>
           <Route path="/" Component={HomePage} />
           <Route path="/aboutus" Component={AboutUsPage} />
-          <Route path="/posts" Component={PostListPage}>
-            <Route path="/:id" Component={SinglePostPage}></Route>
-          </Route>
+          <Route path="/posts" Component={PostListPage} />
+          <Route path="/posts/:id" Component={SinglePostPage} />
         </Route>
       </Routes>
     </BrowserRouter>

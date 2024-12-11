@@ -1,12 +1,14 @@
 import Card from "../components/Card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function PostListPage() {
   const [posts, setPosts] = useState();
 
-  fetch("http://localhost:3000/posts")
-    .then((res) => res.json())
-    .then((data) => fetchPosts(data));
+  useEffect(() => {
+    fetch("http://localhost:3000/posts")
+      .then((res) => res.json())
+      .then((data) => fetchPosts(data));
+  }, []);
 
   const fetchPosts = (posts) => {
     setPosts(posts);
